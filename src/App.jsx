@@ -10,9 +10,19 @@ import Products from './Pages/Products';
 import Header from './Components/Header';
 import SingleProduct from './Pages/SingleProduct';
 import ContactUs from './Pages/ContactUs';
+import { useSelector } from 'react-redux';
 
 function App() {
 
+  const user = useSelector((state)=>state.user);
+  const UserAuth = () => {
+   
+    if (user.isAuth) {
+     return <Outlet />
+    } else {
+     return <LogIn />
+    }
+  }
   const NavBar = () => {
     return (
       <>
@@ -27,17 +37,19 @@ function App() {
         <Routes>
           <Route element={<NavBar />}>
             <Route path='/' element={<Home />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/products' element={<Products />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/dashboard' element={<DashBoard />} />
-            <Route path='/product/:id' element={<SingleProduct />} />
-            <Route path='/contactus' element={<ContactUs/>} />
+            <Route element={<UserAuth />}>
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/products' element={<Products />} />
+              <Route path='/profile' element={<Profile />} />
+              <Route path='/dashboard' element={<DashBoard />} />
+              <Route path='/product/:id' element={<SingleProduct />} />
+            </Route>
+            <Route path='/contactus' element={<ContactUs />} />
           </Route>
           <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<LogIn />} />
-        
-         
+
+
         </Routes>
       </BrowserRouter>
     </div>
