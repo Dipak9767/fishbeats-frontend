@@ -1,0 +1,36 @@
+.users-container{
+    height: 72vh;
+    width: 90%;
+    background-color: #494F55;
+    overflow: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+.users-container  .user-card{
+    width: 30%;
+    height: 55%;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+.user-card div{
+    width: 90%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.user-card div span{
+    flex: 1;
+    font-weight: bold;
+    text-align: center;
+}
+.user-card div p{
+    flex: 2;
+    text-align: left;
+}

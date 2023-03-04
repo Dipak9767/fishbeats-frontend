@@ -1,0 +1,78 @@
+
+
+.card-container {
+    width:95%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10px;
+    background-color: #fff;
+    transition: .4s;
+    font-size: medium;
+    color: #000;
+}
+
+ .card-container h3 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding-top: 10px;
+}
+.card-container:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    transform: translate(0px, -8px);
+    transition: .6s;
+}
+
+.card-container img {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+ .card-container h6 {
+    font-size: 15px;
+    text-align: center;
+    color: #a1ab9c;
+    margin: 0;
+}
+ .card-container button {
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    padding: 13px;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: red;
+    transition: all .2s ease-in-out
+}
+.card-container .buy1:hover{
+    font-size: 21px;
+    background-color: rgb(188, 0, 0);
+}
+.edit-delete{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.edit-delete button{
+    width: 20%;
+    border-radius: 0%;
+    font-size: 10px;
+    padding: 5px;
+}
+#edit,#delete:hover{
+    font-size: 11px;
+}
